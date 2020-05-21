@@ -1,0 +1,95 @@
+@import '../../styles/_var.scss';
+
+.form-download {
+  padding: 40px 22px 35px;
+  background: rgba(#1C1C1C, .9);
+  border-radius: 10px;
+
+  @media (min-width: 1200px) {
+    padding: 78px 56px 71px;
+  }
+
+  @media (max-width: 1380px) and (max-height: 800px) {
+    padding: 40px 22px 35px;
+  }
+
+  &__line {
+    margin: 0 0 20px;
+  }
+
+  &__input {
+    height: 48px;
+    width: 100%;
+    padding: 0 31px;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    color: #1C1C1C;
+    background: #FFFFFF;
+    border-radius: 6px;
+    transition: all ease-out .15s;
+
+    &::placeholder {
+      color: #1C1C1C;
+      transition: all ease-out .15s;
+    }
+
+    &:hover,
+    &:focus {
+    
+      &::placeholder,
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $clr-primary inset;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 51px;
+    padding: 5px 20px;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    border-radius: 6px;
+    background: $clr-primary;
+    transition: all ease-in .15s;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($clr-primary, 5);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, .4) inset;
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin: 1.2em 0 0;
+    padding: 0 0 0 10px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.77;
+    color: $clr-text;
+
+    &::before {
+      content: '*';
+      position: absolute;
+      top: 1px;
+      left: 0;
+    }
+  }
+}
