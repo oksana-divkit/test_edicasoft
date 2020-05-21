@@ -2,7 +2,6 @@
 
 
 > Test project for Edicasoft
-> https://oksana-divkit.github.io/test_edicasoft/
 
 ## Build Setup
 
