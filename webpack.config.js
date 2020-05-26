@@ -1,11 +1,14 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
+
+const srcPath = path.resolve(__dirname, 'src/');
+const isDevEnv =  process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: isDevEnv ? '/dist/' : '/test_edicasoft/dist/',
     filename: 'build.js'
   },
   module: {
@@ -21,8 +24,18 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           'vue-style-loader',
-          'css-loader',
-          'sass-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: isDevEnv,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: isDevEnv,
+            },
+          }
         ],
       },
       {
@@ -35,13 +48,18 @@ module.exports = {
             // other preprocessors should work out of the box, no loader config like this necessary.
             'scss': [
               'vue-style-loader',
-              'css-loader',
-              'sass-loader'
-            ],
-            'sass': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax'
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: isDevEnv,
+                },
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: isDevEnv,
+                }
+              }
             ]
           }
           // other vue-loader options go here
@@ -63,7 +81,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@styles': path.resolve(srcPath, './styles'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

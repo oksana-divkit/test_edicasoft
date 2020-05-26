@@ -15,17 +15,17 @@
       </div>
 
       <picture class="hero__photo" aria-role="presentation">
-        <source media="(max-width: 700px)" srcset="./assets/hero-bg-s.jpg">
-        <source media="(max-width: 1200px)" srcset="./assets/hero-bg-m.jpg">
-        <img src="./assets/hero-bg.jpg" />
+        <source media="(max-width: 700px)" srcset="../public/images/hero-bg-s.jpg">
+        <source media="(max-width: 1200px)" srcset="../public/images/hero-bg-m.jpg">
+        <img src="../public/images/hero-bg.jpg" />
       </picture>
     </div>
 
     <article class="article container">
       <picture class="article__photo">
-        <source media="(max-width: 550px)" srcset="./assets/image-1s.jpg">
-        <source media="(max-width: 850px)" srcset="./assets/image-1m.jpg">
-        <img src="./assets/image-1.jpg" alt="White cake" />
+        <source media="(max-width: 550px)" srcset="../public/images/image-1s.jpg">
+        <source media="(max-width: 850px)" srcset="../public/images/image-1m.jpg">
+        <img src="../public/images/image-1.jpg" alt="White cake" />
       </picture>
 
       <div class="article__content">
@@ -38,9 +38,9 @@
 
     <article class="article article--right container">
       <picture class="article__photo">
-        <source media="(max-width: 550px)" srcset="./assets/image-2s.jpg">
-        <source media="(max-width: 850px)" srcset="./assets/image-2m.jpg">
-        <img src="./assets/image-2.jpg" alt="Vanilla Cake" />
+        <source media="(max-width: 550px)" srcset="../public/images/image-2s.jpg">
+        <source media="(max-width: 850px)" srcset="../public/images/image-2m.jpg">
+        <img src="../public/images/image-2.jpg" alt="Vanilla Cake" />
       </picture>
 
       <div class="article__content">
